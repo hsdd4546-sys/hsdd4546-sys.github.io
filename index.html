@@ -2,33 +2,109 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <!-- 适配移动端，GitHub Pages必备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xyd的个人网页</title>
     <style>
-        body {
-            font-family: "Microsoft YaHei", sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+        * {
+            /* 统一盒模型，消除默认边距 */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            /* 页面背景：淡紫色渐变 */
+            background: linear-gradient(135deg, #f0e6ff, #e6d9ff);
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+            /* 最小高度撑满屏幕 */
+            min-height: 100vh;
+            /* 文字行高优化可读性 */
+            line-height: 1.6;
+        }
+
+        /* 头部：深紫色渐变主题栏 */
         .header {
             text-align: center;
-            background-color: #24292e;
+            background: linear-gradient(135deg, #6a0dad, #9370db);
             color: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px 20px;
+            border-radius: 15px;
+            /* 紫色阴影增强质感 */
+            box-shadow: 0 4px 15px rgba(106, 13, 173, 0.2);
+            /* 过渡动画 */
+            transition: transform 0.3s ease;
         }
+
+        .header:hover {
+            /* 鼠标悬浮轻微上浮 */
+            transform: translateY(-3px);
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        /* 内容区域 */
         .content {
             background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-top: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(106, 13, 173, 0.1);
+            border: 1px solid rgba(192, 160, 221, 0.3);
         }
+
+        .content h2 {
+            /* 标题深紫色 */
+            color: #5a189a;
+            margin: 20px 0 15px;
+            padding-bottom: 8px;
+            /* 标题底部淡紫下划线 */
+            border-bottom: 2px solid #d8b9ff;
+            font-size: 22px;
+        }
+
+        .content p {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* 美化兴趣列表 */
+        .content ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .content li {
+            padding: 8px 0;
+            color: #444;
+            font-size: 16px;
+            /* 紫色小方块前缀 */
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .content li::before {
+            content: "■";
+            color: #7b2cbf;
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+
+        /* 页脚 */
         .footer {
             text-align: center;
-            margin-top: 20px;
-            color: #666;
+            margin-top: 30px;
+            color: #7b2cbf;
+            font-size: 14px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
